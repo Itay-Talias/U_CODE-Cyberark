@@ -1,0 +1,21 @@
+body{
+    background-image: url("https://media.istockphoto.com/photos/garden-lawn-picture-id1065412538?k=20&m=1065412538&s=170667a&w=0&h=N3N4_HC9vnairT3ZlHf4gJAjQfQXPDgqURPWCPe2XN8=");
+     background-size: cover;
+     margin: 0px;
+}
+.RGBA{
+    background-color:rgba(110, 12, 119, 0.2) ;
+    color: rgb(8, 4, 4,0.2);
+    width: 380px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding: 10px; 
+    /* display: inline; */
+}
+.RGB{
+    background-color:rgba(110, 12, 119) ;
+    width: 380px;
+    padding: 10px;
+    margin-top: 0%;
+}
+

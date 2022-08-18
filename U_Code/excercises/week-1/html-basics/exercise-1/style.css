@@ -1,0 +1,54 @@
+
+p {
+    display: inline;
+}
+
+div {
+    width: 50%;
+  }
+
+  h1 {
+    font-family: "Helvetica";
+  }
+
+  ul {
+    color: red;
+  }
+
+  .heading {
+    font-weight: bold;
+    vertical-align: middle;
+  }
+  
+  .tomato {
+    color: tomato;
+  }
+  
+  .gross-color {
+    color: #a3c010;
+  }
+  
+  .nice-color {
+    color: #03bbbb;
+  }
+
+  button:hover {
+    background-color: blue;
+    color: white;
+    border: 1px solid black;
+  }  
+  div:hover {
+    background-color: blue;
+    color: white;
+    border: 1px solid black;
+  }  
+  p:nth-child(2) {
+    background: red;
+  }
+  /* div > p {
+    color: green;
+  } */
+
+  div p {
+    color: blue;
+  }

@@ -1,0 +1,35 @@
+#container {
+    position: relative;
+    margin: auto;
+    background-color: #1dd1a1;
+    width: 360px;
+    height: 150px;
+    padding: 30px;
+    border: solid #10ac84;
+}
+
+#desiredSalary-element {
+    display: inline-block;
+}
+
+#birthday-element {
+    display: inline-block;
+}
+
+#name-input {
+    width: 97%;
+}
+
+#phone-input {
+    width: 97%;
+}
+
+#btn-submit {
+    background-color: #10ac84;
+    position: absolute;
+    padding: 10px;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 4px;
+    box-shadow: 1px 1px #888888;
+}

@@ -1,0 +1,66 @@
+.background {
+    background-color: rgb(108, 92, 231);
+    width: 300px;
+    height: 200px;
+    margin: auto;
+    margin-top: 100px;
+    position: relative;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.Money {
+    position: absolute;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.Time {
+    position: absolute;
+    bottom: 0;
+    right: 4px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.col-item {
+    position: absolute;
+    background-color: darkgrey;
+    width: 20px;
+    height: 100%;
+}
+
+.one {
+    height: 20px;
+    bottom: 4px;
+}
+
+.two {
+    height: 100px;
+    bottom: 4px;
+    left: 40px;
+}
+
+.three {
+    height: 150px;
+    bottom: 4px;
+    left: 80px;
+}
+
+.four {
+    height: 120px;
+    bottom: 4px;
+    left: 120px;
+}
+
+.five {
+    height: 110px;
+    bottom: 4px;
+    left: 160px;
+}
+
+.six {
+    height: 50px;
+    bottom: 4px;
+    left: 200px;
+}
