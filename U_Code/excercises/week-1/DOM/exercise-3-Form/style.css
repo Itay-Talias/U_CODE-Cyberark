@@ -14,6 +14,7 @@
 
 #birthday-element {
     display: inline-block;
+    margin-left: 12px;
 }
 
 #name-input {
@@ -32,4 +33,19 @@
     right: 10px;
     border-radius: 4px;
     box-shadow: 1px 1px #888888;
+}
+#err-msg {
+    position: absolute;
+    bottom: 10px;
+    color: red;
+}
+
+#welcome-user {
+    position: relative;
+    display: none;
+    margin: auto;
+    background-color: #1dd1a1;
+    width: 360px;
+    height: 150px;
+    padding: 30px;
 }
