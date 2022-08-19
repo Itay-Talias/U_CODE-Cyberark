@@ -16,8 +16,9 @@ const getRandomColor = function () {
 };
 
 const container = document.getElementById("container");
-for (let i = 0; i < 21; i++) {
+for (let i = 0; i < 10; i++) {
     const newItem = document.createElement("div");
+    newItem.setAttribute("id", `${i}`);
     newItem.style.width = "100px";
     newItem.style.height = "100px";
     newItem.style.backgroundColor = getRandomColor();
@@ -25,6 +26,25 @@ for (let i = 0; i < 21; i++) {
     newItem.style.margin = "10px";
     newItem.onmouseenter = function () {
         newItem.style.backgroundColor = getRandomColor();
+        areSameColor()
+            ? (alert.style.display = "block")
+            : (alert.style.display = "none");
     };
     container.appendChild(newItem);
 }
+
+const alert = document.getElementById("nice-job-alert");
+alert.style.display = "none";
+
+const areSameColor = function () {
+    let flag = true;
+    for (let i = 0; i < 9; i++) {
+        if (
+            document.getElementById(`${i}`).style.backgroundColor !==
+            document.getElementById(`${i + 1}`).style.backgroundColor
+        ) {
+            flag = false;
+        }
+    }
+    return flag;
+};
