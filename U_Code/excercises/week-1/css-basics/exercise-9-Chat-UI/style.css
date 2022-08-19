@@ -42,18 +42,20 @@
 }
 
 .text-container {
-    height: 40px;
-    width: 180px;
+    display: inline-block;
+}
+
+.cover-text {
     margin: 5px;
     border-radius: 4px;
     font-style: oblique;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: inline-block;
+    height: 40px;
 }
 
 .right {
     background-color: rgb(46, 204, 113);
-    justify-content: right;
+    margin-left: 83%;
 }
 
 .left {
@@ -61,12 +63,15 @@
 }
 
 .text {
-    display: grid;
-    width: 140px;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 10px;
+    /* font-family: "Cursive"; */
+    font-weight: bold;
 }
 
 .time {
-    display: grid;
-    width: 30px;
-    justify-content: right;
+    display: inline-block;
+    font-size: 10px;
+    font-weight: bold;
 }
