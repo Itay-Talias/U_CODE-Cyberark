@@ -1,0 +1,38 @@
+{
+    "animals" : [
+        {
+            "name": "Cattle",
+            "weight":500,
+            "data unit" :"kg" ,
+            "endangered":false,
+            "foods" : ["grass"],
+            "animals_eaten":[],
+            "delicious":5
+        },        {
+            "name": "Elephant",
+            "weight":1000,
+            "data unit" :"kg" ,
+            "endangered":true,
+            "foods" : ["plants", "shrubs","fruits"],
+            "animals_eaten":[],
+            "delicious":0
+        },
+        {
+            "name": "Wolf",
+            "weight":70,
+            "data unit" :"kg" ,
+            "endangered":true,
+            "foods" : ["carnivores"],
+            "animals_eaten":[ "large hoofed", "elk", "bison", "moose"],
+            "delicious":0
+        },        {
+            "name": "Squirrel",
+            "weight":12,
+            "data unit" :"kg" ,
+            "endangered":false,
+            "foods" : ["nuts","seeds"],
+            "animals_eaten":[],
+            "delicious":0
+        }
+    ]
+}

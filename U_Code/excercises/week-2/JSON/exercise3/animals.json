@@ -1,0 +1,13 @@
+{
+    "animals" : [
+        {
+            "name": "",
+            "weight":0,
+            "data unit" :"" ,
+            "endangered":false,
+            "foods" : [],
+            "animals_eaten":[],
+            "delicious":0
+        }
+    ]
+}

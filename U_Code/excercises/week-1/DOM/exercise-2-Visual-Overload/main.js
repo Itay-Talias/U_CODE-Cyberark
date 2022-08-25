@@ -16,7 +16,7 @@ const getRandomColor = function () {
 };
 
 const container = document.getElementById("container");
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 102; i++) {
     const newItem = document.createElement("div");
     newItem.setAttribute("id", `${i}`);
     newItem.style.width = "100px";

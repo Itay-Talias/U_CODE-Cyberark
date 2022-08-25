@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script id="classmates-template" type="text/x-handlebars-template">
+            {{#each classmates}}
+                {{#if socialNetwork}}
+                    <h3 class="classmate">{{name}} - {{description}}</h3>
+                {{/if}}
+            {{/each}}
+        </script>
+        <div class="classmates"></div>
+
+        <script id="animals-template" type="text/x-handlebars-template">
+            {{#each animals}}
+                <h3>{{this}}</h3>
+            {{/each}}
+        </script>
+        <div class="animals"></div>
+
+        <script id="languages-template" type="text/x-handlebars-template">
+            {{#each languages}}
+                <h3>{{this}}</h3>
+            {{/each}}
+        </script>
+        <div class="languages"></div>
+
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+        <script src="./main.js"></script>
+    </body>
+</html>
