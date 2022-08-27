@@ -16,11 +16,19 @@ const RenderTweeter = () => {
                 $(`#${comment.id}`).append(deleteComment);
                 const CommentElement = `<div class="text-comment" data-id="${comment.id}">${comment.text} </div>`;
                 $(`#${comment.id}`).append(CommentElement);
+                const likecomment = comment.like
+                    ? `<button class="btn-like-comment">unlike</button>`
+                    : `<button class="btn-like-comment">like</button>`;
+                $(`#${comment.id}`).append(likecomment);
             }
             const inputComment = `<input type="text" placeholder="write a comment" class="input-comment" />`;
             const btnInputComment = `<button class="btn-comment" >Comment</button>`;
             $(`#${post.id}`).append(inputComment);
             $(`#${post.id}`).append(btnInputComment);
+            const likePost = post.like
+                ? `<button class="btn-like-post">unlike</button>`
+                : `<button class="btn-like-post">like</button>`;
+            $(`#${post.id}`).append(likePost);
         }
     };
     return { renderPosts };

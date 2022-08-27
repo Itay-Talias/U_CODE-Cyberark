@@ -9,8 +9,21 @@ const DataTweeter = () => {
     };
 
     const addPost = (text) => {
-        _POST_DATA.push({ text: text, id: "p" + _POST_NUMBER, comments: [] });
+        _POST_DATA.push({
+            text: text,
+            id: "p" + _POST_NUMBER,
+            like: false,
+            comments: [],
+        });
         _POST_NUMBER++;
+    };
+
+    const setLikePost = (postID) => {
+        _POST_DATA.forEach((post) => {
+            if (post.id === postID) {
+                post.like = !post.like;
+            }
+        });
     };
 
     const removePost = (postID) => {
@@ -20,7 +33,11 @@ const DataTweeter = () => {
     const addComment = (id, text) => {
         _POST_DATA.forEach((post) => {
             if (post.id === id) {
-                post.comments.push({ id: "c" + _COMMENT_NUMBER, text: text });
+                post.comments.push({
+                    id: "c" + _COMMENT_NUMBER,
+                    like: false,
+                    text: text,
+                });
                 _COMMENT_NUMBER++;
             }
         });
@@ -36,11 +53,25 @@ const DataTweeter = () => {
         });
     };
 
+    const setLikeComment = (postId, commentId) => {
+        _POST_DATA.forEach((post) => {
+            if (post.id === postId) {
+                post.comments.forEach((comment) => {
+                    if (commentId === comment.id) {
+                        comment.like = !comment.like;
+                    }
+                });
+            }
+        });
+    };
+
     return {
         getPosts,
         addPost,
         removePost,
         addComment,
         removeComment,
+        setLikePost,
+        setLikeComment,
     };
 };
