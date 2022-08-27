@@ -11,3 +11,4 @@ Tweeter project - Create a basic tweeter page with many option: add posts/commen
 3. CSS
 
 ## Screenshots
+![image](https://user-images.githubusercontent.com/88106495/187037979-e6612a33-886a-4e71-ab27-4eb61731c06a.png)
