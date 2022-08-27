@@ -2,7 +2,7 @@
 
 ## Overview
 
-Tweeter project - Create a basic tweeter page with many option: add posts/comments,delete posts/comments and get like/unlike to posts/comments
+Tweeter project - Create a basic tweeter page with a few options: add posts/comments, delete posts/comments and get like/unlike to posts/comments.
 
 ## Technologies
 
