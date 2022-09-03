@@ -5,7 +5,9 @@ const exercise = require("./mainOfexercises.js");
 test("isEven should return true if n is even, false otherwise", () => {
     const result1 = exercise.isEven(7);
     const result2 = exercise.isEven(6);
+    const result3 = exercise.isEven(0);
 
+    expect(result3).toBeTruthy();
     expect(result2).toBeTruthy();
     expect(result1).toBeFalsy();
 });
@@ -26,4 +28,13 @@ test("simplify should return a clean string without these symbols: ^^^^^^^^^", (
     expect(result).toEqual("hello");
 });
 //Exercise-4
-//Exercise-5
+test("It should verify that there is at least one boolean in the array", () => {
+    const result1 = exercise.validate([false, 2, 3, 4]);
+    expect(result1).toBeFalsy();
+
+    const result2 = exercise.validate([true, 2, 3, 4]);
+    expect(result2).toBeTruthy();
+
+    const result3 = exercise.validate([1, 2, 3, 4]);
+    expect(typeof result3).toEqual(typeof {});
+});

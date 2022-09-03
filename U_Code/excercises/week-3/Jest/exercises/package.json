@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "mainOfexercises.js",
-  "type": "module",
   "scripts": {
     "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^29.0.0",
     "jest": "^29.0.1"
   }
 }

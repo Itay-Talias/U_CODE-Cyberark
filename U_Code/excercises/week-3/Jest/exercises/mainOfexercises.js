@@ -26,8 +26,17 @@ const simplify = function (str) {
 };
 
 //Exercise-4
-//Exercise-5
-//Exercise-6
-//Exercise-7
 
-module.exports = { isEven, removeAtLeastOne, simplify };
+const validate = function (arr) {
+    trueArr = arr.filter((x) => x === true && typeof x === "boolean");
+    falseArr = arr.filter((x) => x === false && typeof x === "boolean");
+    if (trueArr.length === 0 && falseArr.length === 0) {
+        return { error: "erorr" };
+    } else {
+        return trueArr.length > falseArr.length;
+    }
+};
+
+//Exercise-5
+
+module.exports = { isEven, removeAtLeastOne, simplify, validate };
