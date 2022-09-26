@@ -90,3 +90,105 @@ print(calc_power_of_2(5))    # 5^2 = 25
 print(calc_power_of_2(7))    # 7^2 = 49
 print(calc_power_of_4(2))    # 2^4 = 16
 print(calc_power_of_4(3))    # 3^4 = 81
+
+
+################ Nested Function #######################
+def get_print():
+    def my_print(msg):
+        print(msg)
+
+    return my_print
+
+
+get_print()("hello")
+print_func = get_print()
+print(type(print_func))
+
+
+def generate_add(x):
+    def inner(y):
+        return x + y
+
+    return inner
+
+
+add_1 = generate_add(1)
+add_2 = generate_add(2)
+print(add_1(5))  # 6
+print(add_2(5))  # 7
+
+
+def get_power_of(pow):
+    def base(base):
+        return base**pow
+    return base
+
+
+calc_power_of_2 = get_power_of(2)
+calc_power_of_4 = get_power_of(4)
+print(calc_power_of_2(5))    # 5^2 = 25
+print(calc_power_of_2(7))    # 7^2 = 49
+print(calc_power_of_4(2))    # 2^4 = 16
+print(calc_power_of_4(3))    # 3^4 = 81
+
+
+def outer_func():
+    local_var = 11
+
+    def inner_func():
+        local_var = 21
+        print("inner_func local_var = ", local_var)
+
+    inner_func()
+    print("outer_func local_var = ", local_var)
+
+
+outer_func()
+
+
+def outer_func():
+    local_var = 11
+
+    def inner_func():
+        nonlocal local_var
+        local_var = 21
+        print("inner_func local_var = ", local_var)
+    inner_func()
+    print("outer_func local_var = ", local_var)
+
+
+outer_func()
+
+
+global_var = 10
+
+
+def outer_func():
+    local_var = 11
+
+    def inner_func():
+        global global_var
+        global_var = 21
+        print("inner_func global_var = ", global_var)
+    inner_func()
+    print("outer_func global_var = ", global_var)
+
+
+outer_func()
+print('outside global_var = ', global_var)
+
+
+def setCounter(step):
+    counter = 0
+
+    def count():
+        nonlocal counter
+        counter += step
+        print(counter)
+    return count
+
+
+increment = setCounter(2)
+increment()
+increment()
+increment()
