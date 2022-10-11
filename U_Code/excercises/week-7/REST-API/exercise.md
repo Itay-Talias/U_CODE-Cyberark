@@ -35,3 +35,109 @@ In Movie API have 2 main objects: Movie and Actor
 ## Endpoints
 
 ### General Movie CRUD
+
+Request:
+
+```
+GET http://api.movieapp.com/movies/Harry Potter and the Goblet of Fire HTTP/1.1
+```
+
+Response:
+
+```
+HTTP/1.1 200 OK
+
+{
+    "title" : "Harry Potter and the Goblet of Fire",
+    "plot" : "During Harry's fourth year, Hogwarts plays host to the Triwizard Tournament. Three European schools participate in the tournament, with three 'champions' representing each school in the deadly tasks. The Goblet of Fire chooses Fleur Delacour, Viktor Krum, and Cedric Diggory to compete against each other. However, Harry's name is also produced from the Goblet thus making him a fourth champion, which leads to a terrifying encounter with a reborn Lord Voldemort.",
+    "poster" : "https://www.amazon.com/Harry-Potter-Goblet-Daniel-Radcliffe/dp/B000GOVLNK",
+    "budget" : 150000000,
+    "revenue" : 896000000,
+    "genres" : ["adventure","fantasy","detective"],
+    "popularity" : 9.2,
+    "review" : 10,
+    "runtime" : 157,
+}
+```
+
+Request:
+
+```
+POST http://api.movieapp.com/movies HTTP/1.1
+{
+    "title" : "Harry Potter and the Goblet of Fire",
+    "plot" : "During Harry's fourth year, Hogwarts plays host to the Triwizard Tournament. Three European schools participate in the tournament, with three 'champions' representing each school in the deadly tasks. The Goblet of Fire chooses Fleur Delacour, Viktor Krum, and Cedric Diggory to compete against each other. However, Harry's name is also produced from the Goblet thus making him a fourth champion, which leads to a terrifying encounter with a reborn Lord Voldemort.",
+    "poster" : "https://www.amazon.com/Harry-Potter-Goblet-Daniel-Radcliffe/dp/B000GOVLNK",
+    "budget" : 150000000,
+    "revenue" : 896000000,
+    "genres" : ["adventure","fantasy","detective"],
+    "popularity" : 9.2,
+    "review" : 10,
+    "runtime" : 157,
+}
+```
+
+Response:
+
+```
+HTTP/1.1 201 Created
+Location: /movies/Harry Potter and the Goblet of Fire
+{
+    "title" : "Harry Potter and the Goblet of Fire",
+    "plot" : "During Harry's fourth year, Hogwarts plays host to the Triwizard Tournament. Three European schools participate in the tournament, with three 'champions' representing each school in the deadly tasks. The Goblet of Fire chooses Fleur Delacour, Viktor Krum, and Cedric Diggory to compete against each other. However, Harry's name is also produced from the Goblet thus making him a fourth champion, which leads to a terrifying encounter with a reborn Lord Voldemort.",
+    "poster" : "https://www.amazon.com/Harry-Potter-Goblet-Daniel-Radcliffe/dp/B000GOVLNK",
+    "budget" : 150000000,
+    "revenue" : 896000000,
+    "genres" : ["adventure","fantasy","detective"],
+    "popularity" : 9.2,
+    "review" : 10,
+    "runtime" : 157,
+}
+```
+
+Request:
+
+```
+PUT http://api.movieapp.com/movies/Harry Potter and the Goblet of Fire HTTP/1.1
+{
+    "title" : "Harry Potter and the Goblet of Fire",
+    "plot" : "During Harry's fourth year, Hogwarts plays host to the Triwizard Tournament. Three European schools participate in the tournament, with three 'champions' representing each school in the deadly tasks. The Goblet of Fire chooses Fleur Delacour, Viktor Krum, and Cedric Diggory to compete against each other. However, Harry's name is also produced from the Goblet thus making him a fourth champion, which leads to a terrifying encounter with a reborn Lord Voldemort.",
+    "poster" : "https://www.amazon.com/Harry-Potter-Goblet-Daniel-Radcliffe/dp/B000GOVLNK",
+    "budget" : 150000000,
+    "revenue" : 896000000,
+    "genres" : ["adventure","fantasy","detective"],
+    "popularity" : 9.2,
+    "review" : 10,
+    "runtime" : 180,
+}
+```
+
+Response:
+
+```
+HTTP/1.1 200 OK
+{
+    "title" : "Harry Potter and the Goblet of Fire",
+    "plot" : "During Harry's fourth year, Hogwarts plays host to the Triwizard Tournament. Three European schools participate in the tournament, with three 'champions' representing each school in the deadly tasks. The Goblet of Fire chooses Fleur Delacour, Viktor Krum, and Cedric Diggory to compete against each other. However, Harry's name is also produced from the Goblet thus making him a fourth champion, which leads to a terrifying encounter with a reborn Lord Voldemort.",
+    "poster" : "https://www.amazon.com/Harry-Potter-Goblet-Daniel-Radcliffe/dp/B000GOVLNK",
+    "budget" : 150000000,
+    "revenue" : 896000000,
+    "genres" : ["adventure","fantasy","detective"],
+    "popularity" : 9.2,
+    "review" : 10,
+    "runtime" : 180,
+}
+```
+
+Request:
+
+```
+DELETE http://api.movieapp.com/movies/Harry Potter and the Goblet of Fire HTTP/1.1
+
+```
+
+Response:
+
+```
+HTTP/1.1 204 No Content
+```
