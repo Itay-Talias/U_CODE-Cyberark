@@ -141,3 +141,97 @@ Response:
 ```
 HTTP/1.1 204 No Content
 ```
+
+### General Actor CRUD
+
+Request:
+
+```
+GET http://api.movieapp.com/actors/Brad Pitt HTTP/1.1
+```
+
+Response:
+
+```
+HTTP/1.1 200 OK
+
+{
+    "name": "Brad Pitt",
+    "bio": "William Bradley Pitt (born December 18, 1963) is…",
+    "birthday": "1963-12-18",
+    "deathday": null,
+    "gender": 2,
+    "popularity": 9.93
+}
+```
+
+Request:
+
+```
+POST http://api.movieapp.com/actors HTTP/1.1
+{
+    "name": "Brad Pitt",
+    "bio": "William Bradley Pitt (born December 18, 1963) is…",
+    "birthday": "1963-12-18",
+    "deathday": null,
+    "gender": 2,
+    "popularity": 9.93
+}
+```
+
+Response:
+
+```
+HTTP/1.1 201 Created
+Location: /actors/283
+{
+    "name": "Brad Pitt",
+    "bio": "William Bradley Pitt (born December 18, 1963) is…",
+    "birthday": "1963-12-18",
+    "deathday": null,
+    "gender": 2,
+    "popularity": 9.93
+}
+```
+
+Request:
+
+```
+PUT http://api.movieapp.com/actors/Brad Pitt HTTP/1.1
+{
+    "name": "Brad Pitt",
+    "bio": "William Bradley Pitt (born December 18, 1963) is…",
+    "birthday": "1963-12-18",
+    "deathday": null,
+    "gender": 2,
+    "popularity": 10
+}
+```
+
+Response:
+
+```
+HTTP/1.1 200 OK
+{
+    "name": "Brad Pitt",
+    "bio": "William Bradley Pitt (born December 18, 1963) is…",
+    "birthday": "1963-12-18",
+    "deathday": null,
+    "gender": 2,
+    "popularity": 10
+}
+}
+```
+
+Request:
+
+```
+DELETE http://api.movieapp.com/actors/Brad Pitt HTTP/1.1
+
+```
+
+Response:
+
+```
+HTTP/1.1 204 No Content
+```
