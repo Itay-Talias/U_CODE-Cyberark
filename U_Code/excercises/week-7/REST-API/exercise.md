@@ -235,3 +235,29 @@ Response:
 ```
 HTTP/1.1 204 No Content
 ```
+
+### Get actors of a specific movie
+
+```
+GET http://api.movieapp.com/movies/Harry Potter and the Goblet of Fire/actors HTTP/1.1
+```
+
+### Add an actor to a specific movie
+
+```
+POST http://api.movieapp.com/movies/Harry Potter and the Goblet of Fire/actors HTTP/1.1
+{
+    "name": "Brad Pitt",
+    "bio": "William Bradley Pitt (born December 18, 1963) is…",
+    "birthday": "1963-12-18",
+    "deathday": null,
+    "gender": 2,
+    "popularity": 9.93
+}
+```
+
+### Remove an actor from a specific movie
+
+```
+DELETE http://api.movieapp.com/movies/actors/Brad Pitt HTTP/1.1
+```
