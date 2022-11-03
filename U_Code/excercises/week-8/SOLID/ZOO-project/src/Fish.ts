@@ -1,4 +1,4 @@
-import IAnimal from "./IAnimal";
+import IAnimal from "./Animal";
 import Food from "./Food";
 
 class Fish extends IAnimal {

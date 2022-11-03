@@ -1,6 +1,6 @@
 import Food from "./Food";
 
-class IAnimal {
+abstract class Animal {
     name: String;
     food: Food;
     type: string;
@@ -11,4 +11,4 @@ class IAnimal {
     }
 }
 
-export default IAnimal;
+export default Animal;
