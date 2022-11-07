@@ -4,7 +4,7 @@ class EndGame extends Component {
     render() {
         return (
             <div className="EndGame">
-                {this.props.status ? <div>Loseeee</div> : <div>Winnnnnn</div>}
+                {this.props.win ? <div>Winnnnnn</div> : <div>Loseeee</div>}
             </div>
         );
     }

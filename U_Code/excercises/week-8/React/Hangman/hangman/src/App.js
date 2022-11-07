@@ -66,7 +66,7 @@ class App extends Component {
         return (
             <div className="App">
                 {this.state.endGame ? (
-                    <EndGame status={this.state.status} />
+                    <EndGame win={this.state.win} />
                 ) : (
                     <div>
                         <Score score={this.state.score} />
