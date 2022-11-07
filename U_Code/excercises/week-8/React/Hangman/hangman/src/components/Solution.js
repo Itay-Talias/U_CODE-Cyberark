@@ -1,18 +1,19 @@
 import { React, Component } from "react";
+import Letter from "./Letter";
 class Solution extends Component {
-    constructor() {
-        super();
-        this.secretWord = ["_", "_", "_", "_"];
-    }
     render() {
         return (
             <div id="solution">
-                {this.secretWord.map((letter, index) => (
-                    <span key={index} className="letter">
-                        {" "}
-                        {letter}{" "}
-                    </span>
-                ))}
+                {this.props.solution
+                    .split("")
+                    .map((letter, index) =>
+                        this.props.letterStatus[letter] ? (
+                            <Letter letter={letter} key={index} />
+                        ) : (
+                            <Letter letter="_" key={index} />
+                        )
+                    )}
+                <div>{this.props.hint}</div>
             </div>
         );
     }

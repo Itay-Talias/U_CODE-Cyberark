@@ -9,6 +9,7 @@ class FoodSupply {
             ["worms", 0],
         ]);
     }
+    
     public get Amount() {
         return this._amounts;
     }

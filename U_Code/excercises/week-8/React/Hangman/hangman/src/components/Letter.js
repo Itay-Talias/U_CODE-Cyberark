@@ -1,10 +1,20 @@
 import { React, Component } from "react";
+import "./Letter.css";
+
 class Letter extends Component {
-    constructor() {
-        super();
-    }
+    selectLetter = () => {
+        this.props.selectLetter(this.props.letter);
+    };
     render() {
-        return <span className="letter">a</span>;
+        return (
+            <span
+                onClick={this.selectLetter}
+                className={this.props.selected ? "selected" : "non-selected"}
+            >
+                {" "}
+                {this.props.letter}{" "}
+            </span>
+        );
     }
 }
 
