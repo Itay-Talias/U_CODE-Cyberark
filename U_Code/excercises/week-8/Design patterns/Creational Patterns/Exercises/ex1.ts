@@ -55,6 +55,12 @@ class Boat implements Vehicle {
 
 class VehicleFactory {
     private static instance: VehicleFactory;
+    private VehicleConstructor = {
+        [VehicleType.Boat]: Boat,
+        [VehicleType.Bus]: Bus,
+        [VehicleType.Plane]: Plane,
+        [VehicleType.Taxi]: Taxi,
+    };
     private constructor() {}
     public static getInstance(): VehicleFactory {
         if (!VehicleFactory.instance) {
@@ -63,13 +69,7 @@ class VehicleFactory {
         return VehicleFactory.instance;
     }
     public createVehicle(type: VehicleType): Vehicle {
-        const VehicleConstructor = {
-            [VehicleType.Boat]: new Boat(),
-            [VehicleType.Bus]: new Bus(),
-            [VehicleType.Plane]: new Plane(),
-            [VehicleType.Taxi]: new Taxi(),
-        };
-        return VehicleConstructor[type];
+        return new this.VehicleConstructor[type]();
     }
 }
 

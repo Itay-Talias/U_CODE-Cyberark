@@ -40,7 +40,14 @@ class Boat {
     }
 }
 class VehicleFactory {
-    constructor() { }
+    constructor() {
+        this.VehicleConstructor = {
+            [VehicleType.Boat]: Boat,
+            [VehicleType.Bus]: Bus,
+            [VehicleType.Plane]: Plane,
+            [VehicleType.Taxi]: Taxi,
+        };
+    }
     static getInstance() {
         if (!VehicleFactory.instance) {
             VehicleFactory.instance = new VehicleFactory();
@@ -48,13 +55,7 @@ class VehicleFactory {
         return VehicleFactory.instance;
     }
     createVehicle(type) {
-        const VehicleConstructor = {
-            [VehicleType.Boat]: new Boat(),
-            [VehicleType.Bus]: new Bus(),
-            [VehicleType.Plane]: new Plane(),
-            [VehicleType.Taxi]: new Taxi(),
-        };
-        return VehicleConstructor[type];
+        return new this.VehicleConstructor[type]();
     }
 }
 class TravelAgency {
