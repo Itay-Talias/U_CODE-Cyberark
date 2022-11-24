@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { selectRandomCount, increment } from "./RandomCountSlice";
+import { selectRandomCount, incrementRandom } from "../counter/counterSlice";
 import styles from "../counter/Counter.module.css";
 
 export function RandomCounter() {
@@ -15,7 +15,7 @@ export function RandomCounter() {
             <div className={styles.row}>
                 <button
                     className={styles.button}
-                    onClick={() => dispatch(increment())}
+                    onClick={() => dispatch(incrementRandom())}
                 >
                     Add Amount
                 </button>
